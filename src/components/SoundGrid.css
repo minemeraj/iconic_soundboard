@@ -1,0 +1,33 @@
+.sound-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .sound-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .sound-card {
+        border-radius: 16px;
+        padding: 1rem;
+    }
+
+    .brand-name {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .sound-grid {
+        grid-template-columns: 1fr;
+    }
+}
