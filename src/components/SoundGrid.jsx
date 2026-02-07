@@ -1,11 +1,11 @@
 import React from 'react';
 import SoundCard from './SoundCard';
 import { brands } from '../data/brands';
-import { useAudio } from '../hooks/useAudio';
+import { useYouTubeAudio } from '../hooks/useYouTubeAudio';
 import './SoundGrid.css';
 
 const SoundGrid = () => {
-    const { playingId, playSound } = useAudio();
+    const { playingId, playSound } = useYouTubeAudio();
 
     return (
         <div className="sound-grid">
@@ -14,7 +14,7 @@ const SoundGrid = () => {
                     key={brand.id}
                     brand={brand}
                     isPlaying={playingId === brand.id}
-                    onClick={playSound}
+                    onClick={() => playSound(brand.youtubeId, brand.id, brand.startTime, brand.duration)}
                 />
             ))}
         </div>
