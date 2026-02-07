@@ -3,13 +3,13 @@ import './SoundCard.css';
 
 const SoundCard = ({ brand, isPlaying, onClick }) => {
     // Construct the embed URL with necessary parameters
-    // loop=1 and playlist make the video loop continuously
-    const embedUrl = `https://www.youtube.com/embed/${brand.youtubeId}?start=${brand.startTime}&end=${brand.startTime + brand.duration}&autoplay=${isPlaying ? 1 : 0}&controls=0&modestbranding=1&rel=0&loop=1&playlist=${brand.youtubeId}`;
+    const embedUrl = `https://www.youtube.com/embed/${brand.youtubeId}?start=${brand.startTime}&end=${brand.startTime + brand.duration}&autoplay=${isPlaying ? 1 : 0}&controls=0&modestbranding=1&rel=0`;
 
     return (
         <div
             className={`sound-card ${isPlaying ? 'playing' : ''}`}
-            style={{ '--brand-color': brand.color, padding: 0, overflow: 'hidden' }}
+            style={{ '--brand-color': brand.color, padding: 0, overflow: 'hidden', cursor: 'pointer' }}
+            onClick={onClick}
         >
             <iframe
                 width="100%"
@@ -19,7 +19,7 @@ const SoundCard = ({ brand, isPlaying, onClick }) => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
-                style={{ pointerEvents: 'auto' }}
+                style={{ pointerEvents: 'none' }}
             ></iframe>
             <div className="brand-label" style={{
                 position: 'absolute',
