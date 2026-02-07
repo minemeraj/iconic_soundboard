@@ -10,9 +10,9 @@ export const brands = [
         id: 'netflix',
         name: 'Netflix',
         logo: netflixLogo,
-        youtubeId: 'GV3HUDMQ-HK', // Netflix 4K Compilation - trying this one
-        startTime: 1,
-        duration: 3,
+        youtubeId: 'fUiJulYbUaE', // Stranger Things trailer with Netflix intro at 1:46
+        startTime: 106, // 1 min 46 sec
+        duration: 2,
         color: '#E50914', // Netflix Red
         description: 'Tudum'
     },
