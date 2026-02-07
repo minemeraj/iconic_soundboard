@@ -3,11 +3,8 @@ import './SoundCard.css';
 
 const SoundCard = ({ brand, isPlaying, onClick }) => {
     // Construct the embed URL with necessary parameters
-    // autoplay=1: Play when loaded (we might want to control this via prop/state for performance)
-    // controls=0: Minimal UI
-    // start: Start time
-    // end: End time (optional, but helpful)
-    const embedUrl = `https://www.youtube.com/embed/${brand.youtubeId}?start=${brand.startTime}&end=${brand.startTime + brand.duration}&autoplay=${isPlaying ? 1 : 0}&controls=0&modestbranding=1&rel=0`;
+    // loop=1 and playlist make the video loop continuously
+    const embedUrl = `https://www.youtube.com/embed/${brand.youtubeId}?start=${brand.startTime}&end=${brand.startTime + brand.duration}&autoplay=${isPlaying ? 1 : 0}&controls=0&modestbranding=1&rel=0&loop=1&playlist=${brand.youtubeId}`;
 
     return (
         <div
@@ -22,7 +19,7 @@ const SoundCard = ({ brand, isPlaying, onClick }) => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
-                style={{ pointerEvents: 'auto' }} //Allow interaction if desired, or 'none' for pure soundboard feel
+                style={{ pointerEvents: 'auto' }}
             ></iframe>
             <div className="brand-label" style={{
                 position: 'absolute',
