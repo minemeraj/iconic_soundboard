@@ -1,22 +1,18 @@
 import netflixLogo from '../assets/logos/netflix.png';
-import netflixSound from '../assets/sounds/netflix.mp3';
 import hboLogo from '../assets/logos/hbo.png';
-import hboSound from '../assets/sounds/hbo.mp3';
 import playstationLogo from '../assets/logos/playstation.png';
-import playstationSound from '../assets/sounds/playstation.mp3';
 import intelLogo from '../assets/logos/intel.png';
-import intelSound from '../assets/sounds/intel.mp3';
 import mcdonaldsLogo from '../assets/logos/mcdonalds.png';
-import mcdonaldsSound from '../assets/sounds/mcdonalds.mp3';
 import bmwLogo from '../assets/logos/bmw.png';
-import bmwSound from '../assets/sounds/bmw.mp3';
 
 export const brands = [
     {
         id: 'netflix',
         name: 'Netflix',
         logo: netflixLogo,
-        sound: netflixSound,
+        youtubeId: 'fUiJulYbUaE', // Stranger Things trailer with Netflix intro at 1:46
+        startTime: 106, // 1 min 46 sec
+        duration: 2,
         color: '#E50914', // Netflix Red
         description: 'Tudum'
     },
@@ -24,7 +20,9 @@ export const brands = [
         id: 'hbo',
         name: 'HBO',
         logo: hboLogo,
-        sound: hboSound,
+        youtubeId: 'zls2YQDGIqY',
+        startTime: 0,
+        duration: 5,
         color: '#FFFFFF', // HBO White (classic static)
         description: 'Static Angel'
     },
@@ -32,7 +30,9 @@ export const brands = [
         id: 'playstation',
         name: 'PlayStation',
         logo: playstationLogo,
-        sound: playstationSound,
+        youtubeId: 'oAhvQoLpvsM', // (Verified Working) Classic PS1 startup
+        startTime: 0,
+        duration: 8,
         color: '#003791', // PlayStation Blue
         description: 'Startup'
     },
@@ -40,7 +40,9 @@ export const brands = [
         id: 'intel',
         name: 'Intel',
         logo: intelLogo,
-        sound: intelSound,
+        youtubeId: '_y3o4z_e7xU', // "Intel Bong Sound Effect" - generic upload
+        startTime: 0,
+        duration: 3,
         color: '#0068B5', // Intel Blue
         description: 'Bong'
     },
@@ -48,7 +50,9 @@ export const brands = [
         id: 'mcdonalds',
         name: 'McDonald\'s',
         logo: mcdonaldsLogo,
-        sound: mcdonaldsSound,
+        youtubeId: '6jJkdRaa04g', // Just the audio logo, likely easier
+        startTime: 0,
+        duration: 3,
         color: '#FFC72C', // McDonald's Yellow
         description: 'I\'m Lovin\' It'
     },
@@ -56,7 +60,9 @@ export const brands = [
         id: 'bmw',
         name: 'BMW',
         logo: bmwLogo,
-        sound: bmwSound,
+        youtubeId: 'qZ7IWJLrxZo', // Keeping BMW for now as it seemed to be a comparison video
+        startTime: 0,
+        duration: 4,
         color: '#0066B1', // BMW Blue
         description: 'Engine'
     }
